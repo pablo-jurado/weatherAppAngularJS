@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <title>AngularJS</title>
+</head>
+<body class="text-center">
+  <header class="jumbotron">AngularJS weatherApp</header>
+  <nav>
+    <a href="#" class="btn btn-secondary">home</a>
+    <a href="#!/page1" class="btn btn-secondary" >page 1</a>
+    <a href="#!/page2" class="btn btn-secondary">page 2</a>
+  </nav>
+  <br />
+  <div class="container">
+    <div ng-view></div>
+  </div>
+</body>
+</html>
