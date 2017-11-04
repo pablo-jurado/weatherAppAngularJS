@@ -1,23 +1,33 @@
+// -----------------------------------------------------------------------------
+// Module
+// -----------------------------------------------------------------------------
 var app = angular.module('weatherApp', ['ngRoute', 'ngResource'])
 
+
+// -----------------------------------------------------------------------------
+// Routes
+// -----------------------------------------------------------------------------
 app.config(function ($routeProvider) {
   $routeProvider
-    .when('/page1', {
-      templateUrl: 'pages/page1.html',
-      controller: 'page1Controller'
+    .when('/', {
+      templateUrl: 'pages/home.html',
+      controller: 'homeController'
     })
-    .when('/page2', {
-      templateUrl: 'pages/page2.html',
-      controller: 'page2Controller'
+    .when('/weather', {
+      templateUrl: 'pages/weather.html',
+      controller: 'weatherController'
     })
     .otherwise('/')
-
 })
 
-app.controller('page1Controller', function ($scope) {
+
+// -----------------------------------------------------------------------------
+// Controllers
+// -----------------------------------------------------------------------------
+app.controller('homeController', function ($scope) {
   console.log($scope)
 })
 
-app.controller('page2Controller', function ($scope) {
+app.controller('weatherController', function ($scope) {
   console.log($scope)
 })

@@ -12,15 +12,16 @@
   <title>AngularJS</title>
 </head>
 <body class="text-center">
-  <header class="jumbotron">AngularJS weatherApp</header>
+  <header class="jumbotron">
+    <a href="#">
+      <h2>WeatherApp</h2>
+    </a>
+  </header>
   <nav>
-    <a href="#" class="btn btn-secondary">home</a>
-    <a href="#!/page1" class="btn btn-secondary" >page 1</a>
-    <a href="#!/page2" class="btn btn-secondary">page 2</a>
+    <!-- <a href="#!/page1" class="btn btn-secondary" >page 1</a>
+    <a href="#!/page2" class="btn btn-secondary">page 2</a> -->
   </nav>
   <br />
-  <div class="container">
-    <div ng-view></div>
-  </div>
+  <div ng-view class="container"></div>
 </body>
 </html>
