@@ -24,10 +24,27 @@ app.config(function ($routeProvider) {
 // -----------------------------------------------------------------------------
 // Controllers
 // -----------------------------------------------------------------------------
-app.controller('homeController', function ($scope) {
-  console.log($scope)
-})
+app.controller('homeController', ['$scope', 'cityService',
+  function ($scope,cityService) {
+    $scope.city = cityService.city
 
-app.controller('weatherController', function ($scope) {
-  console.log($scope)
+    $scope.$watch('city', function () {
+        cityService.city = $scope.city
+    })
+  }
+])
+
+app.controller('weatherController', ['$scope', 'cityService',
+  function ($scope, cityService) {
+    $scope.city = cityService.city
+  }
+])
+
+
+// -----------------------------------------------------------------------------
+// Custom Service
+// -----------------------------------------------------------------------------
+
+app.service('cityService', function () {
+  this.city = 'New York'
 })
