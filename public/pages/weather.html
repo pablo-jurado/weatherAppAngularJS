@@ -1,7 +1,22 @@
 <h4>{{ city }}</h4>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti debitis modi architecto distinctio fugiat in esse sequi impedit eos voluptates odio error nam eaque molestiae ipsa aspernatur, delectus magni vero.
-</p>
+<div>
+  <div ng-repeat="item in weather" class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-header">
+        Weather: {{ item.weather[0].description }}
+      </div>
+      <div class="card-block">
+        <blockquote class="card-blockquote">
+          Temp: {{ convertTemp(item.main.temp) }}
+          <footer>
+            {{ convertDate(item.dt) | date: 'medium' }}
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <br />
+  </div>
+</div>
 <a href="#" class="btn btn-secondary">
   back
 </a>
