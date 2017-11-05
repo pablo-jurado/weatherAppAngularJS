@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <h4>Weather</h4>
-    <div class="form-group">
-      <input type="text" ng-model="city" class="form-control"/>
-    </div>
-    <a href="#!/weather" class="btn btn-primary">Check Weather</a>
+    <form ng-submit="submit()">
+      <div class="form-group">
+        <input type="text" ng-model="city" class="form-control"/>
+      </div>
+      <input type="submit" value="Check Weather" class="btn btn-primary"/>
+    </form>
   </div>
 </div>

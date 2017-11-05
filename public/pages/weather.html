@@ -1,22 +1,23 @@
 <h4>{{ city }}</h4>
 <div>
+  <hr />
+  Days:
+  <a href="#!/weather" class="btn btn-secondary" ng-class="{ 'active': days === '1' }">1</a>
+  <a href="#!/weather/3" class="btn btn-secondary" ng-class="{ 'active': days === '3' }">3</a>
+  <a href="#!/weather/5" class="btn btn-secondary" ng-class="{ 'active': days === '5' }">5</a>
+  <hr />
+</div>
+<div>
   <div ng-repeat="item in weather" class="col-md-6 offset-md-3">
-    <div class="card">
-      <div class="card-header">
-        Weather: {{ item.weather[0].description }}
-      </div>
-      <div class="card-block">
-        <blockquote class="card-blockquote">
-          Temp: {{ convertTemp(item.main.temp) }}
-          <footer>
-            {{ convertDate(item.dt) | date: 'medium' }}
-          </footer>
-        </blockquote>
-      </div>
-    </div>
-    <br />
+    <weather-container
+      description="{{ item.weather[0].description }}"
+      temp="{{ convertTemp(item.main.temp) }}"
+      date="item.dt"
+    >
+
+    </weather-container>
   </div>
 </div>
-<a href="#" class="btn btn-secondary">
+<a href="#" class="btn btn-primary">
   back
 </a>

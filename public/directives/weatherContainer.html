@@ -1,0 +1,17 @@
+<div>
+  <div class="card">
+    <div class="card-header">
+      Weather: {{ description }}
+    </div>
+    <div class="card-block">
+      <blockquote class="card-blockquote">
+        Temp: {{ temp }}
+        <footer>
+          {{ date * 1000 | date: 'medium' }}
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+  <br />
+</div>
+
